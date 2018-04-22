@@ -1,0 +1,58 @@
+:root {
+    box-sizing:border-box; 
+}
+
+*,*::before,*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+.contenedor {
+   width: 100%;
+   height: 100vh;
+
+   color:white;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+
+   background-image:  url("wall.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+.key {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: none;
+    border: 5px solid gainsboro;
+    border-radius: 20%;
+    box-shadow: 10px 10px 10px black;
+    transition: all .03s;
+}
+
+@media(max-width:800px){
+.key {
+    width:150px; 
+}
+
+}
+
+
+.child{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+}
+
+.playing {
+    transform: scale(1.3);
+    border-color: #ffc500;
+    box-shadow: 0 0 10px #ffc600; 
+}
